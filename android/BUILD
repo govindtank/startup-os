@@ -16,6 +16,7 @@ genrule(
 
 android_library(
     name = "firestore",
+    visibility = ["//visibility:public"],
     exports = [
         "@com_android_support_support_annotations_25_2_0//jar",
         "@com_android_support_support_compat_25_2_0//aar",
@@ -34,6 +35,24 @@ android_library(
         "@com_squareup_okhttp_okhttp_2_7_2//jar",
         "@com_squareup_okio_okio_1_6_0//jar",
     ],
+)
+
+android_library(
+    name = "appcompat_v7",
+    visibility = ["//visibility:public"],
+    exports = [
+        "@com_android_support_appcompat_v7_27_0_2//aar",
+        "@com_android_support_animated_vector_drawable_27_0_2//aar",
+        "@com_android_support_support_core_ui_27_0_2//aar",
+        "@com_android_support_support_annotations_27_0_2//jar",
+        "@com_android_support_support_vector_drawable_27_0_2//aar",
+        '@com_android_support_support_compat_27_0_2//aar',
+        "@com_android_support_support_core_utils_27_0_2//aar",
+        "@com_android_support_support_fragment_27_0_2//aar",
+        "@android_arch_lifecycle_runtime_1_0_3//aar",
+        '@android_arch_lifecycle_common_1_0_3//jar',
+        '@android_arch_core_common_1_0_0//jar',
+    ]
 )
 
 android_binary(
